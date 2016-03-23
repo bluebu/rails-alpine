@@ -1,2 +1,2 @@
 # rails-alpine
-rails-alpine
+docker pull bluebu/rails-alpine
