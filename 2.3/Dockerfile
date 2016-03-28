@@ -2,11 +2,12 @@ FROM ruby:2.3-alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
 ENV RAILS_VERSION="4.2.6" \
-    BUILD_PACKAGES="curl-dev build-base" \
+    BUILD_PACKAGES="curl-dev build-base openssh" \
     DEV_PACKAGES="tzdata libxml2 libxml2-dev libxslt libxslt-dev mysql-client imagemagick git" 
 
 RUN \
-  apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES
+  apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES && \
+  && rm /var/cache/apk/*
 
 RUN \
   gem install -N nokogiri -- --use-system-libraries && \
