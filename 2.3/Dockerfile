@@ -7,7 +7,7 @@ ENV RAILS_VERSION="4.2.6" \
 
 RUN \
   apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES && \
-  && rm /var/cache/apk/*
+  rm /var/cache/apk/*
 
 RUN \
   gem install -N nokogiri -- --use-system-libraries && \
