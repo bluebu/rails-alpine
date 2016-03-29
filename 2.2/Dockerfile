@@ -3,7 +3,8 @@ MAINTAINER bluebu <bluebuwang@gmail.com>
 
 ENV RAILS_VERSION="4.2.6" \
     BUILD_PACKAGES="curl-dev build-base openssh" \
-    DEV_PACKAGES="tzdata libxml2 libxml2-dev libxslt libxslt-dev mysql-client imagemagick git" 
+    DEV_PACKAGES="tzdata libxml2 libxml2-dev libxslt libxslt-dev mysql-client \
+                  imagemagick imagemagick-dev mysql-dev sqlite-dev git" 
 
 RUN \
   apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES && \
@@ -22,4 +23,4 @@ RUN \
   rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem
 
-CMD [ "irb" ]
+CMD [ "/bin/sh" ]
