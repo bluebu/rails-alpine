@@ -8,7 +8,6 @@ ENV RAILS_VERSION="4.2.6" \
 
 RUN \
   apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES && \
-  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
   rm /var/cache/apk/*
 
 RUN \
