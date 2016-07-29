@@ -12,15 +12,15 @@ RUN \
   rm /var/cache/apk/*
 
 RUN \
-  gem install -N nokogiri -- --use-system-libraries && \
+  gem install -N nokogiri && \
   gem install -N rails --version "$RAILS_VERSION" && \
   echo 'gem: --no-document' >> ~/.gemrc && \
   cp ~/.gemrc /etc/gemrc && \
   chmod uog+r /etc/gemrc && \
 
   # cleanup and settings
-  bundle config --global build.nokogiri  "--use-system-libraries" && \
-  bundle config --global build.nokogumbo "--use-system-libraries" && \
+  # bundle config --global build.nokogiri  "--use-system-libraries" && \
+  # bundle config --global build.nokogumbo "--use-system-libraries" && \
   rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem
 
