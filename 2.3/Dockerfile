@@ -12,7 +12,7 @@ RUN \
   rm /var/cache/apk/*
 
 RUN \
-  gem install -N nokogiri -- --use-system-libraries && \
+  gem install -N nokogiri && \
   gem install -N rails --version "$RAILS_VERSION" && \
   echo 'gem: --no-document' >> ~/.gemrc && \
   cp ~/.gemrc /etc/gemrc && \
