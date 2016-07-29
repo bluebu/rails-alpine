@@ -9,6 +9,9 @@ RUN \
   apk --update --upgrade add $BUILD_PACKAGES $DEV_PACKAGES
 
 RUN \
+  cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+RUN \
   gem install -N nokogiri -- --use-system-libraries && \
   gem install -N rails --version "$RAILS_VERSION" && \
   echo 'gem: --no-document' >> ~/.gemrc && \
