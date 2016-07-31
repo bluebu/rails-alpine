@@ -1,7 +1,7 @@
 FROM ruby:2.2-alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
-ENV RAILS_VERSION="4.2.6" \
+ENV RAILS_VERSION="5.0.0" \
     BUILD_PACKAGES="curl-dev build-base openssh" \
     DEV_PACKAGES="tzdata libxml2 libxml2-dev libxslt libxslt-dev mysql-client \
                   imagemagick imagemagick-dev mysql-dev sqlite-dev git nodejs" 

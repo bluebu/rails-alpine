@@ -1,7 +1,7 @@
-FROM ruby:2.3-alpine
+FROM bluebu/rails-alpine:2.3
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
-ENV RAILS_VERSION="4.2.6" \
+ENV RAILS_VERSION="4.2.7" \
     BUILD_PACKAGES="curl-dev build-base openssh" \
     DEV_PACKAGES="tzdata libxml2 libxml2-dev libxslt libxslt-dev mysql-client \
                   imagemagick imagemagick-dev mysql-dev sqlite-dev git nodejs" 
@@ -23,4 +23,5 @@ RUN \
   rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem
 
+CMD [ "/bin/sh" ]
 
