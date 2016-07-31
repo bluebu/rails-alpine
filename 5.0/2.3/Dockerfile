@@ -23,4 +23,4 @@ RUN \
   rm -rf /usr/lib/lib/ruby/gems/*/cache/* && \
   rm -rf ~/.gem
 
-
+CMD [ "/bin/sh" ]

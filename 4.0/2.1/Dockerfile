@@ -1,4 +1,4 @@
-FROM bluebu/rails-alpine:2.3
+FROM ruby:2.1-alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
 ENV RAILS_VERSION="4.2.7" \
@@ -24,4 +24,3 @@ RUN \
   rm -rf ~/.gem
 
 CMD [ "/bin/sh" ]
-

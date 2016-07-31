@@ -1,4 +1,4 @@
-FROM bluebu/rails-alpine:2.3
+FROM ruby:2.3-alpine
 MAINTAINER bluebu <bluebuwang@gmail.com>
 
 ENV RAILS_VERSION="5.0.0" \
